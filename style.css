@@ -36,6 +36,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transition: .5s;
 }
 nav a{
     display: inline-block;
@@ -47,9 +48,6 @@ nav a:hover{
     color: var(--Soft-orange);
 }
 .main-img .desktop-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
 }
 .main-img .mobile-img{
