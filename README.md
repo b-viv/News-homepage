@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
+- Solution URL: https://www.frontendmentor.io/solutions/news-homepage-uxZP2w6IM9
 - Live Site URL: https://b-viv.github.io/News-homepage/
 
 ## My process
