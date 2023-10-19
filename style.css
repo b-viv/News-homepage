@@ -15,10 +15,6 @@
     font-family: 'Inter', sans-serif;
     font-size: 15px;
 }
-.menu-open, 
-.menu-close{
-    display: none;
-}
 body{
     width: 100vw;
     display: flex;
@@ -29,6 +25,7 @@ body{
     width: 80%;
     margin-top: 2%;
 }
+/*----------nav starts----------*/
 header{
     width: 100%;
     height: 9rem;
@@ -37,6 +34,13 @@ header{
     justify-content: space-between;
     align-items: center;
     transition: .5s;
+}
+nav{
+    width: 470px;
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 nav a{
     display: inline-block;
@@ -47,16 +51,23 @@ nav a{
 nav a:hover{
     color: var(--Soft-orange);
 }
+.menu-open,
+.menu-close {
+    display: none;
+    position: absolute;
+    opacity: 0;
+}
+/*----------nav ends----------*/
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 .main-img .desktop-img{
     width: 100%;
 }
 .main-img .mobile-img{
     display: none;
-}
-.main{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
 }
 .main-img{
     margin: 0;
@@ -64,7 +75,7 @@ nav a:hover{
     grid-column: 1 / 3;
     grid-row: 1;
 }
-/*------------right----------*/
+/*------------right section----------*/
 .right-side{
     grid-column: 3 / 3;
     grid-row: 1/3;
@@ -95,7 +106,7 @@ hr{
     border-top: 1px solid var(--Dark-grayish-blue);
     border-bottom: 0px;
 }
-/*-------------left------------*/
+/*-------------left section------------*/
 .left-side{
     grid-column: 1 / 3;
     grid-row: 2/3;
@@ -120,7 +131,6 @@ hr{
 }
 .part p{
     color: var(--Dark-grayish-blue);
-    
 }
 .part button{
     width: 180px;
@@ -138,7 +148,7 @@ hr{
 .part button:hover{
     background-color: var(--Soft-orange);
 }
-/*---------------middle---------------*/
+/*---------------middle section---------------*/
 .middle{
     margin: 40px 0 40px 0;
     grid-column: 1 / 4;
@@ -150,44 +160,32 @@ hr{
 .middle img{
     width: 8rem;
 }
-.middle01,
-.middle02,
-.middle03{
+.card{
     width: 350px;
     display: flex;
     flex-direction: row;
     gap: 23px;
 }
-.middle01-main,
-.middle02-main,
-.middle03-main {
+.card-text{
     display: flex;  
     flex-direction: column;
     justify-content: space-between;
 }
-.middle01-main h2,
-.middle02-main h2,
-.middle03-main h2{
+.card-text h2{
     font-size: 30px;
     color: var(--Grayish-blue);
 }
-.middle01-main a,
-.middle02-main a,
-.middle03-main a {
+.card-text a{
     font-size: 17px;
     font-weight: 800;
     text-decoration: none;
     color: var(--Very-dark-blue);
     letter-spacing: .5px;
 }
-.middle01-main a:hover,
-.middle02-main a:hover,
-.middle03-main a:hover {
+.card-text a:hover{
     color: var(--Soft-orange);
 }
-.middle01-main p,
-.middle02-main p,
-.middle03-main p {
+.card p{
     color: var(--Dark-grayish-blue);
     line-height: 25px;
 }
@@ -196,13 +194,12 @@ hr{
     .container{
         width: 95%;
     }
-    .middle01,
-    .middle02,
-    .middle03 {
+    .card{
         gap: 10px;
         margin-right: 10px;
     }
 }
+
 @media (max-width: 870px){
     .main{
         display: flex;
@@ -216,27 +213,22 @@ hr{
         flex-wrap: wrap;
         gap: 14px;
     }
-    .middle img {
+    .card img{
         width: 10rem;
     }
-    .middle01-main p,
-    .middle02-main p,
-    .middle03-main p {
+    .card-text p{
         line-height: 35px;
     }
-    .middle01,
-    .middle02,
-    .middle03 {
+    .card{
         width: 100%;
         gap: 15px;
     }
-    .middle01-main,
-    .middle02-main,
-    .middle03-main {
+    .card-text{
        justify-content: center;
     }
 
 }
+
 @media (max-width: 650px) {
     /*---------nav-menu----------------*/
     nav{
@@ -256,6 +248,8 @@ hr{
         height: 50px;
         margin: 0;
         cursor: pointer;
+        position: relative;
+        opacity: 1;
     }
     .menu-open{
         display: inline-block;
@@ -270,7 +264,6 @@ hr{
         flex-direction: row;
         align-items: flex-start;
     }
-    /*------------------------------------*/
     .container{
         width: 90%;
     }
@@ -289,12 +282,10 @@ hr{
         width: 100%;
         gap: 20px;
     }
-    .middle img {
+    .card img {
         width: 8rem;
     }
-    .middle01,
-    .middle02,
-    .middle03 {
+    .card{
         width: 100%;
         gap: 15px;
     }
